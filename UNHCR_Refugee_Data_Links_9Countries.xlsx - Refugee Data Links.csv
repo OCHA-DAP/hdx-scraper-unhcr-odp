@@ -1,0 +1,50 @@
+,UNHCR Refugee Data — Age/Sex Disaggregated Links  |  9 Countries  |  For Dsys Scraper,,,,,,
+,"TWO APIs: (1) UNHCR Refugee Statistics API [api.unhcr.org] — authoritative source for age/sex disaggregation, bi-annual release  |  (2) ODP Population API [data.unhcr.org] - operational totals, more frequent but age/sex fields often empty",,,,,,
+,,,,,,,
+,"① UNHCR Refugee Statistics API - Refugees by Age & Sex (Bi-annual release, latest year = 2024)",,,,,,
+,Country,ISO3,geo_id,Demographics JSON (age+sex),Demographics CSV (age+sex),Update frequency,Key note
+,Afghanistan,AFG,575,https://api.unhcr.org/population/v1/demographics/?coa=AFG&year=2024&limit=1000,https://api.unhcr.org/population/v1/demographics/?coa=AFG&year=2024&download=true&limit=1000,"Bi-annual
+(Jun + Dec)","Refugees IN Afghanistan (primarily from PKS, IRN). Age/sex data available in Stats API — annual. ODP widget (geo_id=575,…"
+,DRC,COD,486,https://api.unhcr.org/population/v1/demographics/?coa=COD&year=2024&limit=1000,https://api.unhcr.org/population/v1/demographics/?coa=COD&year=2024&download=true&limit=1000,"Bi-annual
+(Jun + Dec)",Refugees IN DRC (~490K). Age/sex in Stats API annually. ODP page uses async JS widgets — use Stats API as primary for de…
+,Sudan,SDN,295,https://api.unhcr.org/population/v1/demographics/?coa=SDN&year=2024&limit=1000,https://api.unhcr.org/population/v1/demographics/?coa=SDN&year=2024&download=true&limit=1000,"Bi-annual
+(Jun + Dec)","Refugees IN Sudan (~862K, mainly South Sudanese). Stats API has full age/sex disaggregation annually. ODP pop_group=5072…"
+,Myanmar,MMR,693,https://api.unhcr.org/population/v1/demographics/?coa=MMR&year=2024&limit=1000,https://api.unhcr.org/population/v1/demographics/?coa=MMR&year=2024&download=true&limit=1000,"Bi-annual
+(Jun + Dec)",Refugees IN Myanmar (~20K registered). Main displacement story is IDPs (3.77M) and Rohingya in BGD. Stats API demographi…
+,South Sudan,SSD,259,https://api.unhcr.org/population/v1/demographics/?coa=SSD&year=2024&limit=1000,https://api.unhcr.org/population/v1/demographics/?coa=SSD&year=2024&download=true&limit=1000,"Bi-annual
+(Jun + Dec)","Refugees IN South Sudan (~619K, overwhelmingly from Sudan post-Apr 2023). Stats API has age/sex breakdown. ODP data upda…"
+,Syria,SYR,112,https://api.unhcr.org/population/v1/demographics/?coa=SYR&year=2024&limit=1000,https://api.unhcr.org/population/v1/demographics/?coa=SYR&year=2024&download=true&limit=1000,"Bi-annual
+(Jun + Dec)","Refugees IN Syria (~95K, mainly from Lebanon since Dec 2024 hostilities). Stats API has demographics. ODP widget uses po…"
+,Chad,TCD,410,https://api.unhcr.org/population/v1/demographics/?coa=TCD&year=2024&limit=1000,https://api.unhcr.org/population/v1/demographics/?coa=TCD&year=2024&download=true&limit=1000,"Bi-annual
+(Jun + Dec)","Refugees IN Chad (~1.53M, largest being Sudanese post-Apr 2023). Stats API has full age/sex disaggregation — one of the …"
+,Mali,MLI,684,https://api.unhcr.org/population/v1/demographics/?coa=MLI&year=2024&limit=1000,https://api.unhcr.org/population/v1/demographics/?coa=MLI&year=2024&download=true&limit=1000,"Bi-annual
+(Jun + Dec)",Refugees IN Mali (~180K registered + 97K pre-registered). Stats API demographics annual. ODP data last updated 28 Feb 20…
+,Bangladesh,BGD,591,https://api.unhcr.org/population/v1/demographics/?coa=BGD&year=2024&limit=1000,https://api.unhcr.org/population/v1/demographics/?coa=BGD&year=2024&download=true&limit=1000,"Bi-annual
+(Jun + Dec)",Rohingya IN Bangladesh (~1.14M in Cox's Bazar camps + ~35K Bhasan Char). Stats API has age/sex demographics — very detai…
+,,,,,,,
+,,,,,,,
+,"② UNHCR Refugee Statistics API - Population Totals by Origin (same API, different endpoint)",,,,,,
+,"Base URL: https://api.unhcr.org/population/v1/population/  |  Use coa= for refugees IN country, coo= for refugees FROM country  |  Add &coo_all=true to get per-origin breakdown  |  download=true for CSV",,,,,,
+,Country,ISO3,geo_id,Population JSON (by origin),Population CSV (by origin),Update cadence,Note
+,Afghanistan,AFG,575,https://api.unhcr.org/population/v1/population/?coa=AFG&year=2024&limit=1000,https://api.unhcr.org/population/v1/population/?coa=AFG&year=2024&download=true&limit=1000,Bi-annual,Same cadence as demographics. Pair with demographics endpoint for full picture.
+,DRC,COD,486,https://api.unhcr.org/population/v1/population/?coa=COD&year=2024&limit=1000,https://api.unhcr.org/population/v1/population/?coa=COD&year=2024&download=true&limit=1000,Bi-annual,Same cadence as demographics. Pair with demographics endpoint for full picture.
+,Sudan,SDN,295,https://api.unhcr.org/population/v1/population/?coa=SDN&year=2024&limit=1000,https://api.unhcr.org/population/v1/population/?coa=SDN&year=2024&download=true&limit=1000,Bi-annual,Same cadence as demographics. Pair with demographics endpoint for full picture.
+,Myanmar,MMR,693,https://api.unhcr.org/population/v1/population/?coa=MMR&year=2024&limit=1000,https://api.unhcr.org/population/v1/population/?coa=MMR&year=2024&download=true&limit=1000,Bi-annual,Same cadence as demographics. Pair with demographics endpoint for full picture.
+,South Sudan,SSD,259,https://api.unhcr.org/population/v1/population/?coa=SSD&year=2024&limit=1000,https://api.unhcr.org/population/v1/population/?coa=SSD&year=2024&download=true&limit=1000,Bi-annual,Same cadence as demographics. Pair with demographics endpoint for full picture.
+,Syria,SYR,112,https://api.unhcr.org/population/v1/population/?coa=SYR&year=2024&limit=1000,https://api.unhcr.org/population/v1/population/?coa=SYR&year=2024&download=true&limit=1000,Bi-annual,Same cadence as demographics. Pair with demographics endpoint for full picture.
+,Chad,TCD,410,https://api.unhcr.org/population/v1/population/?coa=TCD&year=2024&limit=1000,https://api.unhcr.org/population/v1/population/?coa=TCD&year=2024&download=true&limit=1000,Bi-annual,Same cadence as demographics. Pair with demographics endpoint for full picture.
+,Mali,MLI,684,https://api.unhcr.org/population/v1/population/?coa=MLI&year=2024&limit=1000,https://api.unhcr.org/population/v1/population/?coa=MLI&year=2024&download=true&limit=1000,Bi-annual,Same cadence as demographics. Pair with demographics endpoint for full picture.
+,Bangladesh,BGD,591,https://api.unhcr.org/population/v1/population/?coa=BGD&year=2024&limit=1000,https://api.unhcr.org/population/v1/population/?coa=BGD&year=2024&download=true&limit=1000,Bi-annual,Same cadence as demographics. Pair with demographics endpoint for full picture.
+,,,,,,,
+,,,,,,,
+,"③ ODP Operational API - Refugee Totals by Origin (More frequent updates, but NO age/sex breakdown in these endpoints)",,,,,,
+,Country,ISO3,geo_id,ODP JSON (totals by origin),ODP CSV (totals by origin),Update freq.,Caveat
+,Afghanistan,AFG,575,https://data.unhcr.org/population/get/origin?geo_id=575&population_group=5028&limit=200&fromDate=1900-01-01,https://data.unhcr.org/population/get/origin?export=csv&geo_id=575&population_group=5028&limit=200&fromDate=1900-01-01,Daily/Weekly,age/sex fields present but zero — not collected at ODP widget level
+,DRC,COD,486,https://data.unhcr.org/population/get/origin?geo_id=486&population_group=5249&limit=200&fromDate=1900-01-01,https://data.unhcr.org/population/get/origin?export=csv&geo_id=486&population_group=5249&limit=200&fromDate=1900-01-01,Monthly,Async JS page — pop_group ID needs browser XHR inspection to confirm
+,Sudan,SDN,295,"https://data.unhcr.org/population/get/origin?geo_id=295&population_group=5072,5189,5190,5191,5192,5193,5194,5195,5196&limit=200&fromDate=1900-01-01","https://data.unhcr.org/population/get/origin?export=csv&geo_id=295&population_group=5072,5189,5190,5191,5192,5193,5194,5195,5196&limit=200&fromDate=1900-01-01",Monthly,Rich sub-state data via /get/sublocation. Age/sex zeros in origin endpoint.
+,Myanmar,MMR,693,https://data.unhcr.org/population/get/origin?geo_id=693&population_group=4999&limit=200&fromDate=1900-01-01,https://data.unhcr.org/population/get/origin?export=csv&geo_id=693&population_group=4999&limit=200&fromDate=1900-01-01,Monthly,"IDP data (geo_id=693) is the main story, not refugee stock"
+,South Sudan,SSD,259,"https://data.unhcr.org/population/get/origin?geo_id=259&population_group=4728,4732,4739,4747,4748,4770,4784&population_collection=2&limit=200&fromDate=1900-01-01","https://data.unhcr.org/population/get/origin?export=csv&geo_id=259&population_group=4728,4732,4739,4747,4748,4770,4784&population_collection=2&limit=200&fromDate=1900-01-01",Monthly,population_collection=2 needed alongside pop_group IDs
+,Syria,SYR,112,https://data.unhcr.org/population/get/origin?geo_id=112&population_collection=4&limit=200&fromDate=1900-01-01,https://data.unhcr.org/population/get/origin?export=csv&geo_id=112&population_collection=4&limit=200&fromDate=1900-01-01,Monthly,population_collection=4 for refugees hosted IN Syria
+,Chad,TCD,410,"https://data.unhcr.org/population/get/origin?geo_id=410&population_group=4732,4739,4770,4950,4975,5154,5549,5550&limit=200&fromDate=1900-01-01","https://data.unhcr.org/population/get/origin?export=csv&geo_id=410&population_group=4732,4739,4770,4950,4975,5154,5549,5550&limit=200&fromDate=1900-01-01",Monthly,Best-updated ODP country for Sudan situation refugees — use for freshness
+,Mali,MLI,684,"https://data.unhcr.org/population/get/origin?geo_id=684&population_group=4732,4736,4739,4743,4756,4866,4870,5139&limit=200&fromDate=1900-01-01","https://data.unhcr.org/population/get/origin?export=csv&geo_id=684&population_group=4732,4736,4739,4743,4756,4866,4870,5139&limit=200&fromDate=1900-01-01",Monthly,Quarterly IDP cadence; refugee data monthly
+,Bangladesh,BGD,591,https://data.unhcr.org/population/population/get/sublocation/root?geo_id=591&population_group=5556&forcesublocation=true&fromDate=1900-01-01,— (no CSV export on sublocation endpoint),Monthly,Camp-level granularity via /sublocation/root — unique in ODP

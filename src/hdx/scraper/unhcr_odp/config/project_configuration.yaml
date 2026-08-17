@@ -1,0 +1,35 @@
+demographics_url: "https://api.unhcr.org/population/v1/demographics/?coa={iso3}&limit=1000"
+population_url: "https://api.unhcr.org/population/v1/population/?coa={iso3}&coo_all=true&year={year}&limit=1000"
+countries:
+  - iso3: AFG
+    geo_id: 575
+    odp_url: "https://data.unhcr.org/population/get/origin?geo_id=575&population_group=5028&limit=200&fromDate=1900-01-01"
+  - iso3: COD
+    geo_id: 486
+    odp_url: "https://data.unhcr.org/population/get/origin?geo_id=486&population_collection=4&limit=200&fromDate=1900-01-01"
+  - iso3: SDN
+    geo_id: 295
+    odp_url: "https://data.unhcr.org/population/get/origin?geo_id=295&population_group=5072,5189,5190,5191,5192,5193,5194,5195,5196&limit=200&fromDate=1900-01-01"
+  - iso3: MMR
+    geo_id: 693
+    odp_url: "https://data.unhcr.org/population/get/origin?geo_id=693&population_group=4999&limit=200&fromDate=1900-01-01"
+  - iso3: SSD
+    geo_id: 259
+    odp_url: "https://data.unhcr.org/population/get/origin?geo_id=259&population_group=4728,4732,4739,4747,4748,4770,4784&population_collection=2&limit=200&fromDate=1900-01-01"
+  - iso3: SYR
+    geo_id: 112
+    odp_url: "https://data.unhcr.org/population/get/origin?geo_id=112&population_collection=4&limit=200&fromDate=1900-01-01"
+  - iso3: TCD
+    geo_id: 410
+    odp_url: "https://data.unhcr.org/population/get/origin?geo_id=410&population_group=4732,4739,4770,4950,4975,5154,5549,5550&limit=200&fromDate=1900-01-01"
+  - iso3: MLI
+    geo_id: 684
+    odp_url: "https://data.unhcr.org/population/get/origin?geo_id=684&population_group=4732,4736,4739,4743,4756,4866,4870,5139&limit=200&fromDate=1900-01-01"
+  - iso3: BGD
+    geo_id: 591
+    odp_url: "https://data.unhcr.org/population/get/origin?geo_id=591&population_group=5556&limit=200&fromDate=1900-01-01"
+tags:
+  - refugees
+  - displacement
+  - demographics
+  - population
