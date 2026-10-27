@@ -98,7 +98,6 @@ class Pipeline:
         if not dataset:
             return None
         dataset["dataset_source"] = "UNHCR Refugee Statistics API"
-        dataset.set_expected_update_frequency(180)
         dataset["notes"] = (
             "This dataset contains age and gender disaggregated demographics and population "
             "totals for forcibly displaced persons, including refugees, asylum-seekers, and "
@@ -194,7 +193,6 @@ class Pipeline:
         if not dataset:
             return None
         dataset["dataset_source"] = "UNHCR Operational Data Portal (ODP)"
-        dataset.set_expected_update_frequency(30)
         dataset["notes"] = (
             "This dataset contains operational population figures by country of origin "
             "for forcibly displaced persons. Data is sourced from the "

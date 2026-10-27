@@ -175,3 +175,5 @@ saved_data/
 
 # Mac files
 .DS_Store
+coverage.lcov
+test-results.xml
